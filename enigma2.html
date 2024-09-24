@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigma 2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enigma 2</h1>
+  <p>O que tem cabeça, tem cauda, é marrom e não tem pernas?</p>
+  
+  <input type="text" id="resposta">
+  <button onclick="checarResposta()">Verificar</button>
+
+  <script>
+    function checarResposta() {
+      var resposta = document.getElementById("resposta").value.toLowerCase();
+      if (resposta === "moeda") {
+        alert("Parabéns, você resolveu todos os enigmas!");
+      } else {
+        alert("Resposta errada, tente novamente!");
+      }
+    }
+  </script>
+</body>
+</html>
