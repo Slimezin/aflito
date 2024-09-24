@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigmas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 200px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enigma 1</h1>
+  <p>Eu sou alto quando sou jovem e curto quando sou velho. Quem sou eu?</p>
+  
+  <input type="text" id="resposta">
+  <button onclick="checarResposta()">Verificar</button>
+
+  <script>
+    function checarResposta() {
+      var resposta = document.getElementById("resposta").value.toLowerCase();
+      if (resposta === "vela") {
+        window.location.href = "enigma2.html";
+      } else {
+        alert("Resposta errada, tente novamente!");
+      }
+    }
+  </script>
+</body>
+</html>
