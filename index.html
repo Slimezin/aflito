@@ -1,41 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enigmas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
-    }
-    input[type="text"] {
-      padding: 10px;
-      width: 200px;
-    }
-    button {
-      padding: 10px 20px;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enigmas - Gifhub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .enigma {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .enigma img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+        .enigma h2 {
+            color: #333;
+        }
+        .enigma input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .enigma input[type="button"] {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .enigma p.result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .enigma:last-of-type input[type="text"] {
+            display: none;
+        }
+    </style>
+    <script>
+        function checkAnswer(enigmaNumber, correctAnswer) {
+            const userInput = document.getElementById(`answer${enigmaNumber}`).value.trim();
+            const resultElement = document.getElementById(`result${enigmaNumber}`);
+            if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
+                resultElement.textContent = "Resposta correta!";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "Resposta incorreta. Tente novamente.";
+                resultElement.style.color = "red";
+            }
+        }
+    </script>
 </head>
 <body>
-  <h1>Enigma 1</h1>
-  <p>Eu sou alto quando sou jovem e curto quando sou velho. Quem sou eu?</p>
-  
-  <input type="text" id="resposta">
-  <button onclick="checarResposta()">Verificar</button>
+    <div class="container">
+        <!-- Enigma 1 -->
+        <div class="enigma">
+            <h2>Enigma 1</h2>
+            <img src="imagem1.jpg" alt="Imagem do Enigma 1">
+            <p>Descrição do enigma 1. Resolva o mistério e insira sua resposta.</p>
+            <input type="text" id="answer1" placeholder="Digite sua resposta">
+            <input type="button" value="Verificar" onclick="checkAnswer(1, 'Rei')">
+            <p id="result1" class="result"></p>
+        </div>
 
-  <script>
-    function checarResposta() {
-      var resposta = document.getElementById("resposta").value.toLowerCase();
-      if (resposta === "vela") {
-        window.location.href = "enigma2.html";
-      } else {
-        alert("Resposta errada, tente novamente!");
-      }
-    }
-  </script>
+        <!-- Enigma 2 -->
+        <div class="enigma">
+            <h2>Enigma 2</h2>
+            <img src="imagem2.jpg" alt="Imagem do Enigma 2">
+            <p>Descrição do enigma 2. Resolva o mistério e insira sua resposta.</p>
+            <input type="text" id="answer2" placeholder="Digite sua resposta">
+            <input type="button" value="Verificar" onclick="checkAnswer(2, 'Almeida')">
+            <p id="result2" class="result"></p>
+        </div>
+
+        <!-- Enigma 3 -->
+        <div class="enigma">
+            <h2>Enigma 3</h2>
+            <img src="imagem3.jpg" alt="Imagem do Enigma 3">
+            <p>Descrição do enigma 3. Resolva o mistério e insira sua resposta.</p>
+            <input type="text" id="answer3" placeholder="Digite sua resposta">
+            <input type="button" value="Verificar" onclick="checkAnswer(3, 'Kiara')">
+            <p id="result3" class="result"></p>
+        </div>
+
+        <!-- Enigma 4 -->
+        <div class="enigma">
+            <h2>Enigma 4</h2>
+            <img src="imagem4.jpg" alt="Imagem do Enigma 4">
+            <p>Descrição do enigma 4. Resolva o mistério e insira sua resposta.</p>
+            <input type="text" id="answer4" placeholder="Digite sua resposta">
+            <input type="button" value="Verificar" onclick="checkAnswer(4, 'Félix')">
+            <p id="result4" class="result"></p>
+        </div>
+
+        <!-- Enigma 5 -->
+        <div class="enigma">
+            <h2>Enigma 5</h2>
+            <img src="imagem5.jpg" alt="Imagem do Enigma 5">
+            <p>Descrição do enigma 5. Resolva o mistério e insira sua resposta.</p>
+            <input type="text" id="answer5" placeholder="Digite sua resposta">
+            <input type="button" value="Verificar" onclick="checkAnswer(5, 'Lara')">
+            <p id="result5" class="result"></p>
+        </div>
+
+        <!-- Enigma 6 (Sem caixa de resposta) -->
+        <div class="enigma">
+            <h2>Enigma 6</h2>
+            <img src="imagem6.jpg" alt="Imagem do Enigma 6">
+            <p>Descrição do enigma 6. Não há necessidade de resposta aqui.</p>
+        </div>
+    </div>
 </body>
 </html>
+
