@@ -56,12 +56,12 @@
     </style>
     <script>
         function checkAnswer() {
-            const userInput = document.getElementById('answer3').value.trim();
+            const userInput = document.getElementById('answer2').value.trim();
             const correctAnswer = "Kiara";  // Resposta correta
             if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
-                window.location.href = "enigma4.html";  // Redireciona para a próxima página
+                window.location.href = "enigma3.html";  // Redireciona para a próxima página
             } else {
-                const resultElement = document.getElementById('result3');
+                const resultElement = document.getElementById('result2');
                 resultElement.textContent = "Resposta incorreta. Tente novamente.";
                 resultElement.style.color = "red";
             }
@@ -71,6 +71,13 @@
 <body>
     <div class="container">
         <div class="enigma">
-            <h2>Enigma 3</h2>
-            <img src="https://raw.githubusercontent.com/Slimezin/aflito/refs/heads/main/3.png" alt="Imagem do Enigma 3">
-           
+            <h2>Enigma 2</h2>
+            <img src="https://raw.githubusercontent.com/Slimezin/aflito/refs/heads/main/2.png" alt="Imagem do Enigma 2">
+            <p>Descrição do enigma 3. Resolva o mistério e insira sua resposta.</p>
+            <input type="text" id="answer2" placeholder="Digite sua resposta">
+            <input type="button" value="Verificar" onclick="checkAnswer()">
+            <p id="result2" class="result"></p>
+        </div>
+    </div>
+</body>
+</html>
