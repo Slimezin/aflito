@@ -32,52 +32,15 @@
         .enigma h2 {
             color: #333;
         }
-        .enigma input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .enigma input[type="button"] {
-            display: block;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .enigma p.result {
-            margin-top: 10px;
-            font-weight: bold;
-        }
     </style>
-    <script>
-        function checkAnswer() {
-            const userInput = document.getElementById('answer6').value.trim();
-            const correctAnswer = "Responda";  // Resposta correta (mude conforme necessário)
-            if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
-                window.location.href = "https://outro-site.com";  // Redireciona para um site externo
-            } else {
-                const resultElement = document.getElementById('result6');
-                resultElement.textContent = "Resposta incorreta. Tente novamente.";
-                resultElement.style.color = "red";
-            }
-        }
-    </script>
 </head>
 <body>
     <div class="container">
         <div class="enigma">
             <h2>Enigma 6</h2>
             <img src="imagens/imagem6.jpg" alt="Imagem do Enigma 6">
-            <p>Descrição do enigma 6. Resolva o mistério e insira sua resposta.</p>
-            <input type="text" id="answer6" placeholder="Digite sua resposta">
-            <input type="button" value="Verificar" onclick="checkAnswer()">
-            <p id="result6" class="result"></p>
         </div>
     </div>
 </body>
 </html>
+
