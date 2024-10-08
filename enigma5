@@ -72,7 +72,7 @@
     <div class="container">
         <div class="enigma">
             <h2>Enigma 5</h2>
-            <img src="imagens/imagem5.jpg" alt="Imagem do Enigma 5">
+            <img src="aflito/5.png" alt="Imagem do Enigma 5">
             <p>Descrição do enigma 5. Resolva o mistério e insira sua resposta.</p>
             <input type="text" id="answer5" placeholder="Digite sua resposta">
             <input type="button" value="Verificar" onclick="checkAnswer()">
